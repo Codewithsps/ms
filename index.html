@@ -7,11 +7,14 @@
     <title>Medcrew Surgicals</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- Announcement Bar -->
     <div class="announcement-bar">
@@ -38,7 +41,7 @@
         </a>
 
         <ul class="nav-menu">
-             <li><a href="./">HOME</a></li>
+            <li><a href="./">HOME</a></li>
             <li><a href="./shop">SHOP</a></li>
             <li><a href="./about">ABOUT US</a></li>
             <li><a href="./blog">BLOGS</a></li>
@@ -56,52 +59,55 @@
     </nav>
 
     <!-- SEARCH OVERLAY -->
-<div id="searchOverlay" class="search-overlay" aria-hidden="true">
-    <div class="search-panel">
+    <div id="searchOverlay" class="search-overlay" aria-hidden="true">
+        <div class="search-panel">
 
-        <div class="search-header">
-            <h2>Search</h2>
-            <button class="search-close" onclick="closeSearch()">✕</button>
-        </div>
-
-        <div class="search-body">
-            <input type="text" id="searchInput" class="search-input"
-                   placeholder="Search for products..." />
-
-            <div id="searchResults" class="search-results">
-                <p class="search-placeholder">Type to search…</p>
+            <div class="search-header">
+                <h2>Search</h2>
+                <button class="search-close" onclick="closeSearch()">✕</button>
             </div>
+
+            <div class="search-body">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search for products..." />
+
+                <div id="searchResults" class="search-results">
+                    <p class="search-placeholder">Type to search…</p>
+                </div>
+            </div>
+
         </div>
-
     </div>
-</div>
 
 
-<!-- hero section -->
-  <main class="hero" role="main" aria-label="Hero - product drop">
-    <div class="wrap">
-      <section class="content" >
-        <div class="badge">Fresh drop</div>
-        <h1 style="font-family: Cormorant Garamond; font-size: 50px;">Fresh drop alert. Don’t wait.</h1>
-        <p class="lead" style="font-family: Cormorant Garamond; font-size: 20px;">Limited-run flavours, curated for everyday moments. High-quality ingredients, sustainable packaging, and delightful taste — all in one box.</p>
-        <a class="cta" href="#shop" id="shopBtn">Shop now →</a>
-      </section>
+    <!-- hero section -->
+    <main class="hero" role="main" aria-label="Hero - product drop">
+        <div class="wrap">
+            <section class="content">
+                <div class="badge">Fresh drop</div>
+                <h1 style="font-family: Cormorant Garamond; font-size: 50px;">Fresh drop alert. Don’t wait.</h1>
+                <p class="lead" style="font-family: Cormorant Garamond; font-size: 20px;">Limited-run flavours, curated
+                    for everyday moments. High-quality ingredients, sustainable packaging, and delightful taste — all in
+                    one box.</p>
+                <a class="cta" href="#shop" id="shopBtn">Shop now →</a>
+            </section>
 
-      <figure class="visual" aria-hidden="false">
-        <div class="frame">
-          <!-- Use the uploaded image from the conversation. Local path provided as requested. -->
-          <img class="hero-img" src="https://www.breematcha.com/cdn/shop/files/Sanya_Everyday_post_1.jpg?v=1763642430&width=1000" alt="Hero model and product visuals"/>
+            <figure class="visual" aria-hidden="false">
+                <div class="frame">
+                    <!-- Use the uploaded image from the conversation. Local path provided as requested. -->
+                    <img class="hero-img"
+                        src="https://www.breematcha.com/cdn/shop/files/Sanya_Everyday_post_1.jpg?v=1763642430&width=1000"
+                        alt="Hero model and product visuals" />
+                </div>
+
+                <!-- floating product-like cards (pure CSS placeholders) -->
+                <div class="box yellow b1">EVERYDAY</div>
+                <div class="box green b2">BREE</div>
+                <div class="box purple b3">CEREMONY</div>
+                <div class="box green b4">FRESH</div>
+                <div class="box yellow b5">NEW</div>
+            </figure>
         </div>
-
-        <!-- floating product-like cards (pure CSS placeholders) -->
-        <div class="box yellow b1">EVERYDAY</div>
-        <div class="box green b2">BREE</div>
-        <div class="box purple b3">CEREMONY</div>
-        <div class="box green b4">FRESH</div>
-        <div class="box yellow b5">NEW</div>
-      </figure>
-    </div>
-  </main>
+    </main>
 
 
     <!-- Mobile Menu -->
@@ -111,7 +117,7 @@
             <button class="close-btn" onclick="toggleMenu()">✕</button>
         </div>
         <div class="mobile-menu-items">
-             <a href="./"><span>Home</span></a>
+            <a href="./"><span>Home</span></a>
             <a href="./shop"><span>Shop</span></a>
             <a href="./about"><span>About us</span></a>
             <a href="./blog"><span>Blogs</span></a>
@@ -136,8 +142,8 @@
     <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
 
 
- <!-- Navigation Bar -->
-   
+    <!-- Navigation Bar -->
+
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-container">
@@ -147,12 +153,13 @@
 
 
     <!-- product cards -->
-        <div class="container">
+    <div class="container">
         <div class="products-grid">
             <!-- Product 1 -->
             <div class="product-card">
                 <div class="product-image">
-                    <img src="https://www.breematcha.com/cdn/shop/files/Sanya_Everyday_post_1.jpg?v=1763642430&width=1000" alt="Ceremonial Grade Matcha">
+                    <img src="https://www.breematcha.com/cdn/shop/files/Sanya_Everyday_post_1.jpg?v=1763642430&width=1000"
+                        alt="Ceremonial Grade Matcha">
                     <div class="sale-badge">Save 30%</div>
                     <div class="rating-badge">
                         <span class="star">⭐</span>
@@ -173,7 +180,8 @@
             <!-- Product 2 -->
             <div class="product-card">
                 <div class="product-image">
-                    <img src="https://www.breematcha.com/cdn/shop/files/Sanya_Everyday_post_1.jpg?v=1763642430&width=1000" alt="Everyday Matcha">
+                    <img src="https://www.breematcha.com/cdn/shop/files/Sanya_Everyday_post_1.jpg?v=1763642430&width=1000"
+                        alt="Everyday Matcha">
                     <div class="sale-badge">Save 30%</div>
                     <div class="rating-badge">
                         <span class="star">⭐</span>
@@ -194,7 +202,8 @@
             <!-- Product 3 -->
             <div class="product-card">
                 <div class="product-image">
-                    <img src="https://www.breematcha.com/cdn/shop/files/Sanya_Everyday_post_1.jpg?v=1763642430&width=1000" alt="Ceremonial Matcha Gift Kit">
+                    <img src="https://www.breematcha.com/cdn/shop/files/Sanya_Everyday_post_1.jpg?v=1763642430&width=1000"
+                        alt="Ceremonial Matcha Gift Kit">
                     <div class="sale-badge">Save 30%</div>
                     <div class="rating-badge">
                         <span class="star">⭐</span>
@@ -213,6 +222,90 @@
             </div>
         </div>
     </div>
+
+
+
+
+    <footer>
+        <div class="footer-main">
+            <div class="footer-container">
+                <!-- Logo -->
+                <div class="footer-logo">
+                    <div class="logo-circle">
+                        <!-- <span class="logo-text-top">Brewed Energy</span> -->
+                        <span class="logo-b">MS.</span>
+                        <!-- <span class="logo-text-bottom">Balanced Lifestyle</span> -->
+                    </div>
+                </div>
+
+                <!-- Learn Column -->
+                <div class="footer-column">
+                    <h3>LEARN</h3>
+                    <button class="accordion-toggle" onclick="toggleAccordion(this)">LEARN</button>
+                    <div class="accordion-content">
+                        <ul class="footer-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Blogs</a></li>
+                            <li><a href="#">Shipping & Delivery Info</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Returns & Refund Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Connect Column -->
+                <div class="footer-column">
+                    <h3>CONNECT</h3>
+                    <button class="accordion-toggle" onclick="toggleAccordion(this)">CONNECT</button>
+                    <div class="accordion-content">
+                        <div class="connect-info">
+                            <a href="mailto:hey@breematcha.com" class="connect-item">hey@breematcha.com</a>
+                            <a href="tel:08928000076" class="connect-item">08928000076</a>
+                            <div class="connect-hours">
+                                <div class="connect-item">Monday - Friday</div>
+                                <div class="connect-item">9am to 6pm (IST)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter Column -->
+                <div class="footer-column newsletter-column">
+                    <h3>NEWSLETTER</h3>
+                    <button class="accordion-toggle" onclick="toggleAccordion(this)">NEWSLETTER</button>
+                    <div class="accordion-content active">
+                        <div class="newsletter-form">
+                            <div class="email-input-wrapper">
+                                <input type="email" class="email-input" placeholder="Enter your email">
+                                <button class="submit-btn" aria-label="Submit"></button>
+                            </div>
+                            <p class="newsletter-text">Join our newsletter to stay up to date with features and releases
+                            </p>
+                        </div>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" aria-label="Facebook"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon" aria-label="Instagram"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="social-icon" aria-label="YouTube"><i
+                                    class="fa-brands fa-youtube"></i></a>
+                            
+                            <a href="#" class="social-icon" aria-label="LinkedIn"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">© 2025 Medcre Surgicals.</p>
+        </div>
+    </footer>
+
     <script src="app.js"></script>
 </body>
 
