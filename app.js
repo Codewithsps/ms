@@ -40,73 +40,96 @@ function previousAnnouncement() {
   updateAnnouncement();
 }
 
-
 //hero
-  
-    // Simple progressive enhancement: smooth scroll + CTA analytics stub
-    document.getElementById('shopBtn').addEventListener('click', function(e){
-      e.preventDefault();
-      console.log('CTA: shop now clicked');
-      // Use smooth scroll if available
-      const target = document.querySelector('#shop');
-      if(target) target.scrollIntoView({behavior:'smooth'});
-      else window.location.hash = '#shop';
-    });
 
-    // Accessibility: reduce motion if user prefers (double-check JS side)
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if(prefersReduced){
-      document.querySelectorAll('.box').forEach(b=>b.style.animation='none');
-    }
-  
-    //search bar
-    function openSearch() {
-    document.getElementById("searchOverlay").classList.add("active");
-    document.getElementById("searchInput").focus();
+// Simple progressive enhancement: smooth scroll + CTA analytics stub
+document.getElementById("shopBtn").addEventListener("click", function (e) {
+  e.preventDefault();
+  console.log("CTA: shop now clicked");
+  // Use smooth scroll if available
+  const target = document.querySelector("#shop");
+  if (target) target.scrollIntoView({ behavior: "smooth" });
+  else window.location.hash = "#shop";
+});
+
+// Accessibility: reduce motion if user prefers (double-check JS side)
+const prefersReduced = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
+if (prefersReduced) {
+  document
+    .querySelectorAll(".box")
+    .forEach((b) => (b.style.animation = "none"));
+}
+
+//search bar
+function openSearch() {
+  document.getElementById("searchOverlay").classList.add("active");
+  document.getElementById("searchInput").focus();
 }
 
 function closeSearch() {
-    document.getElementById("searchOverlay").classList.remove("active");
-    document.getElementById("searchInput").value = "";
-    document.getElementById("searchResults").innerHTML =
-        '<p class="search-placeholder">Type to search…</p>';
+  document.getElementById("searchOverlay").classList.remove("active");
+  document.getElementById("searchInput").value = "";
+  document.getElementById("searchResults").innerHTML =
+    '<p class="search-placeholder">Type to search…</p>';
 }
 
 /* ESC to close */
-document.addEventListener("keydown", e => {
-    if (e.key === "Escape") closeSearch();
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeSearch();
 });
 
 /* SEARCH SUGGESTIONS DEMO */
 const dummyData = [
-    "Surgical Gloves",
-    "Face Mask",
-    "Medcrew Sanitizer",
-    "Cotton Roll",
-    "Surgical Tape",
-    "Medical Apron",
-    "Medcrew Scrub Suit",
+  "Surgical Gloves",
+  "Face Mask",
+  "Medcrew Sanitizer",
+  "Cotton Roll",
+  "Surgical Tape",
+  "Medical Apron",
+  "Medcrew Scrub Suit",
 ];
 
 document.getElementById("searchInput").addEventListener("input", function () {
-    const query = this.value.toLowerCase();
-    const container = document.getElementById("searchResults");
+  const query = this.value.toLowerCase();
+  const container = document.getElementById("searchResults");
 
-    if (query.length < 1) {
-        container.innerHTML = '<p class="search-placeholder">Type to search…</p>';
-        return;
-    }
+  if (query.length < 1) {
+    container.innerHTML = '<p class="search-placeholder">Type to search…</p>';
+    return;
+  }
 
-    const results = dummyData.filter(item =>
-        item.toLowerCase().includes(query)
-    );
+  const results = dummyData.filter((item) =>
+    item.toLowerCase().includes(query)
+  );
 
-    if (!results.length) {
-        container.innerHTML = '<p class="search-placeholder">No results found</p>';
-        return;
-    }
+  if (!results.length) {
+    container.innerHTML = '<p class="search-placeholder">No results found</p>';
+    return;
+  }
 
-    container.innerHTML = results
-        .map(item => `<div class="search-item">${item}</div>`)
-        .join("");
+  container.innerHTML = results
+    .map((item) => `<div class="search-item">${item}</div>`)
+    .join("");
 });
+
+//foter
+function toggleAccordion(button) {
+  const content = button.nextElementSibling;
+  const isActive = content.classList.contains("active");
+
+  // Close all accordions
+  document.querySelectorAll(".accordion-content").forEach((item) => {
+    item.classList.remove("active");
+  });
+  document.querySelectorAll(".accordion-toggle").forEach((item) => {
+    item.classList.remove("active");
+  });
+
+  // Open clicked accordion if it wasn't active
+  if (!isActive) {
+    content.classList.add("active");
+    button.classList.add("active");
+  }
+}
