@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medcrew Surgicals</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <button onclick="previousAnnouncement()">←</button>
+        <div class="announcement-text">
+            <svg class="announcement-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                <line x1="6" y1="1" x2="6" y2="4" />
+                <line x1="10" y1="1" x2="10" y2="4" />
+                <line x1="14" y1="1" x2="14" y2="4" />
+            </svg>
+            <span>Your safety, our priority.</span>
+        </div>
+        <button onclick="nextAnnouncement()">→</button>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="navbar">
+        <button class="mobile-toggle" onclick="toggleMenu()">三</button>
+
+        <a href="#" class="logo">
+            <span class="logo-line1">MEDCREW.</span>
+            <span class="logo-line2">SURGICALS</span>
+        </a>
+
+        <ul class="nav-menu">
+             <li><a href="./">HOME</a></li>
+            <li><a href="./shop">SHOP</a></li>
+            <li><a href="./about">ABOUT US</a></li>
+            <li><a href="./blog">BLOGS</a></li>
+            <li><a href="./contact">CONTACT US</a></li>
+        </ul>
+
+        <div class="nav-icons">
+            <button onclick="openSearch()" title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button onclick="openAccount()" title="Account"><i class="fa-regular fa-circle-user"></i></button>
+            <!-- <button onclick="openCart()" title="Cart" style="position: relative;">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <span class="cart-badge">3</span>
+            </button> -->
+        </div>
+    </nav>
+
+    <!-- SEARCH OVERLAY -->
+<div id="searchOverlay" class="search-overlay" aria-hidden="true">
+    <div class="search-panel">
+
+        <div class="search-header">
+            <h2>Search</h2>
+            <button class="search-close" onclick="closeSearch()">✕</button>
+        </div>
+
+        <div class="search-body">
+            <input type="text" id="searchInput" class="search-input"
+                   placeholder="Search for products..." />
+
+            <div id="searchResults" class="search-results">
+                <p class="search-placeholder">Type to search…</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span>Medcrew Surgicals !</span>
+            <button class="close-btn" onclick="toggleMenu()">✕</button>
+        </div>
+        <div class="mobile-menu-items">
+             <a href="./"><span>Home</span></a>
+            <a href="./shop"><span>Shop</span></a>
+            <a href="./about"><span>About us</span></a>
+            <a href="./blog"><span>Blogs</span></a>
+            <a href="./contact"><span>Contact us</span></a>
+        </div>
+        <div class="mobile-menu-footer">
+            <!-- <button class="login-btn">
+                <span><i class="fa-regular fa-circle-user"></i></span>
+                <span>LOGIN</span>
+            </button> -->
+            <div class="social-icons">
+                <a href="#facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#youtube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#pinterest"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#linkedin"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+
+ <!-- Navigation Bar -->
+   
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <h1 class="hero-title">Login Page</h1>
+        </div>
+    </section>
+
+
+   
+    <script src="app.js"></script>
+</body>
+
+
+</html>
